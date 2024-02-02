@@ -1,0 +1,71 @@
+body{
+    margin: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+h2{
+    margin: 5px;
+}
+#plateau{
+    display:flex;
+}
+
+
+/* ================SCORE===============*/
+#tableauDesScores{
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+}
+.Score{
+    background-color: rgb(151, 151, 151);
+    height: 100px;
+    width: 100px;
+    text-align: center;
+}
+/* =========END===SCORE===END=========*/
+
+
+/* ================UNITE===============*/
+#PionsJoueurA{
+background-color: blueviolet;
+height: 100px;
+width: 100px;
+margin: 50px 50px;
+
+}
+#PionsJoueurB{
+background-color: rgb(13, 194, 182);
+height: 100px;
+width: 100px;
+margin: 50px 50px;
+}
+.unite{
+    height:  30px;
+    width : 30px;
+    background-color : red;
+}
+/* =========END===UNITE===END=========*/
+
+
+/* ================BOUTON===============*/
+.FinDeTour{
+    height: 60px;
+    width: 60px;
+    align-self: center;
+    text-align: center;
+    justify-content: center;
+    background-color: bisque;
+}
+/* =========END===BOUTON===END=========*/
+
+
+/* ================Colonne===============*/
+.column{
+    display: flex;
+    align-items: center;
+}
+.column-reverse{
+    flex-direction: column;
+}
+/* =========END===Colonne===END=========*/
