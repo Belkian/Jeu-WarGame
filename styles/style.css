@@ -8,7 +8,9 @@ h2{
 #plateau{
     display:flex;
 }
-
+p{
+    margin: 0;
+}
 
 /* ================SCORE===============*/
 #tableauDesScores{
@@ -28,17 +30,16 @@ h2{
 
 /* ================UNITE===============*/
 #PionsJoueurA{
-background-color: blueviolet;
-height: 100px;
-width: 100px;
-margin: 50px 50px;
-
+    background-color: blueviolet;
+    height: 100px;
+    width: 100px;
+    margin: 50px 50px;
 }
 #PionsJoueurB{
-background-color: rgb(13, 194, 182);
-height: 100px;
-width: 100px;
-margin: 50px 50px;
+    background-color: rgb(13, 194, 182);
+    height: 100px;
+    width: 100px;
+    margin: 50px 50px;
 }
 .unite{
     height:  30px;
@@ -69,3 +70,8 @@ margin: 50px 50px;
     flex-direction: column;
 }
 /* =========END===Colonne===END=========*/
+
+.bourse{
+    display: flex;
+    flex-wrap: wrap;
+}
