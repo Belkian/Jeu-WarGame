@@ -23,25 +23,25 @@ p{
     background-color: rgb(151, 151, 151);
     height: 100px;
     width: 100px;
-    text-align: center;
+    margin: 0 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 /* =========END===SCORE===END=========*/
 
 
 /* ================UNITE===============*/
-#PionsJoueurA{
-    background-color: blueviolet;
-    height: 100px;
-    width: 100px;
+#PionsJoueurA, #PionsJoueurB{
+    height: 120px;
+    width: 160px;
     margin: 50px 50px;
 }
-#PionsJoueurB{
-    background-color: rgb(13, 194, 182);
-    height: 100px;
-    width: 100px;
-    margin: 50px 50px;
-}
+#PionsJoueurA{background-color: blueviolet;}
+#PionsJoueurB{background-color: rgb(13, 194, 182);}
 .unite{
+    margin: 3px;
     height:  30px;
     width : 30px;
     background-color : red;
@@ -52,11 +52,11 @@ p{
 /* ================BOUTON===============*/
 .FinDeTour{
     height: 60px;
-    width: 60px;
-    align-self: center;
-    text-align: center;
-    justify-content: center;
+    width: 100px;
     background-color: bisque;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 /* =========END===BOUTON===END=========*/
 
