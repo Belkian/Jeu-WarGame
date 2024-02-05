@@ -37,8 +37,9 @@ function creationDeLaValeurDeUnite(e){
 BTNFinDeTour.forEach(FinDeTour => { addEventListener('click', ecouteQuelJoueur(FinDeTour))
 });
 function ecouteQuelJoueur(FinDeTour){
-    FinDeTour.addEventListener('click', () => creerUniter(FinDeTour));
+  FinDeTour.addEventListener('click', () => creerUniter(FinDeTour));
 }
+// Quand le joueur appuis sur le bouton fin de tour il ne peut plus bouger les pions sur sont plateau.
 
 function creerUniter(FinDeTour){
   if(FinDeTour.classList.contains('JA')){
@@ -46,6 +47,8 @@ function creerUniter(FinDeTour){
   }
   if(FinDeTour.classList.contains('JB')){
     Create(PionsJoueurA, joueurA)
+    console.log(PionsJoueurB)
+    
 
   }
 }
@@ -59,6 +62,7 @@ function verifPoidsJoueur(poidsMax){
 }
 
 function Create(PionsJoueur){
+  
   for(i=0;i<15;i++){
     number ++;
     poids = equilibre(250)+60;
