@@ -12,7 +12,7 @@ let unitJB = randomWithFixedSum(2400, 15);
 let unitJA = randomWithFixedSum(2400, 15);
 let scoreA = 0;
 let scoreB = 0;
-
+let rejoue = document.getElementById('rejoue');
 /*==========drag and drop========*/
 function allowDrop(ev) {
   ev.preventDefault();
@@ -28,7 +28,6 @@ function drop(ev) {
   ev.target.appendChild(document.getElementById(data));
 }
 /*===FIN====drag and drop===FIN===*/
-
 
 
 
@@ -54,27 +53,90 @@ function creerUniter(FinDeTour){
 }
 
 
+let Ligne = document.querySelectorAll('.Ligne');
 function resolutionDuTour(){
-    let Ligne = document.querySelectorAll('.Ligne');
+  if (Ligne[0].hasChildNodes() === true && Ligne[4].hasChildNodes() === true) {
+    let resultat1 = Ligne[0].firstChild.innerText - Ligne[4].firstChild.innerText;
+    if(resultat1<0){
+      Ligne[0].firstChild.remove();
+    }else{
+      Ligne[4].firstChild.remove();    
+    }
+    CalculeResultat(resultat1);
+    parseInt(resultat1)
+  }
+   
+  if (Ligne[1].hasChildNodes() === true && Ligne[5].hasChildNodes() === true) {
+    let resultat1 = Ligne[1].firstChild.innerText - Ligne[5].firstChild.innerText;
+    if(resultat1<0){
+      Ligne[1].firstChild.remove();
+      }else{
+      Ligne[5].firstChild.remove();    
+      }
+    CalculeResultat(resultat1);
+  }
 
-    // let attaqueC1 = parseInt(document.getElementById('div1').children[0]);
-    // let attaqueC2 = parseInt(document.getElementById('div2').children[0]);
-    // let attaqueC3 = parseInt(document.getElementById('div3').children[0]);
-    // let attaqueC4 = parseInt(document.getElementById('div4').children[0]);
-    // let attaqueC5 = parseInt(document.getElementById('div5').children[0]);
-    // let attaqueC6 = parseInt(document.getElementById('div6').children[0]);
-    // let attaqueC7 = parseInt(document.getElementById('div7').children[0]);
-    // let attaqueC8 = parseInt(document.getElementById('div8').children[0]);
-    // resultat1 = attaqueC1 - attaqueC2;
-    // resultat2 = attaqueC3 - attaqueC4;
-    // resultat3 = attaqueC5 - attaqueC6;
-    // resultat4 = attaqueC7 - attaqueC8;
-    if(resultat <= 0){
-      document.getElementById('scoreA').innerText = resultat + scoreA ;
-    }else if (resultat >= 0) {
-      document.getElementById('scoreB').innerText = resultat + scoreB;
+    
+  if (Ligne[2].hasChildNodes() === true && Ligne[6].hasChildNodes() === true) {
+    let resultat1 = Ligne[2].firstChild.innerText - Ligne[6].firstChild.innerText;
+    if(resultat1<0){
+      Ligne[2].firstChild.remove();
+      }else{
+      Ligne[6].firstChild.remove();    
+      }
+    CalculeResultat(resultat1);
+
+    }
+
+   
+  if (Ligne[3].hasChildNodes() === true && Ligne[7].hasChildNodes() === true) {
+      let resultat1 = Ligne[3].firstChild.innerText - Ligne[7].firstChild.innerText;
+      if(resultat1<0){
+        Ligne[3].firstChild.remove();
+        }else{
+        Ligne[7].firstChild.remove();    
+      }
+      CalculeResultat(resultat1);  
     }
     FinDeTourJABoolean = false;
+    CompteTour();
+}
+
+
+function CalculeResultat(resultat){
+  if(resultat > 0){
+       scoreA = resultat + scoreA;
+       document.getElementById('scoreA').textContent = scoreA;
+     }else if (resultat < 0) {
+       scoreB = resultat + scoreB;
+       document.getElementById('scoreB').textContent = scoreB;
+     }
+}
+
+let compteTour = document.getElementById('CompteTour');
+let icomptetour = 0;
+function CompteTour(){
+  
+  if(icomptetour < 5){
+    compteTour.innerHTML += "<div class='tour'></div>";
+    icomptetour++;
+  }else{
+    FinDeTourJABoolean = true;
+    FinDeTourJBBoolean = true;
+  }
+}
+compteTour.addEventListener('click',NewGame);
+function NewGame(){
+  for (let index = 0; index < Ligne.length; index++) {
+    Ligne[index].every(Ligne[index].childNodes.remove);
+  }
+  number = 0;
+  FinDeTourJABoolean = false;
+  FinDeTourJBBoolean = true;
+  scoreA = 0;
+  scoreB = 0;
+  document.getElementById('scoreA').textContent = scoreA;
+  document.getElementById('scoreB').textContent = scoreB;
 }
 
 let number = 0;

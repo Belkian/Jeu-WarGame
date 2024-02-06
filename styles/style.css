@@ -31,6 +31,24 @@ p{
 }
 /* =========END===SCORE===END=========*/
 
+/*=======Compte Tour======*/
+#CompteTour{
+    background-color: darkblue;
+    height: 30px;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.tour{
+    height: 15px;
+    width: 15px;
+    background-color: aqua;
+    border-radius: 100px;
+    margin: 0 2px;
+}
+/*===FIN====Compte Tour===FIN===*/
+
 
 /* ================UNITE===============*/
 #PionsJoueurA, #PionsJoueurB{
@@ -57,6 +75,11 @@ p{
     display: flex;
     align-items: center;
     justify-content: center;
+}
+#rejoue{
+    height: 30px;
+    width: 100px;
+    background-color: chocolate;
 }
 /* =========END===BOUTON===END=========*/
 
