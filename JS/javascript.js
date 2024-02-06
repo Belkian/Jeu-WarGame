@@ -109,7 +109,7 @@ function CalculeResultat(resultat){
        document.getElementById('scoreA').textContent = scoreA;
      }else if (resultat < 0) {
        scoreB = resultat + scoreB;
-       document.getElementById('scoreB').textContent = scoreB;
+       document.getElementById('scoreB').textContent = scoreB * -1;
      }
 }
 
