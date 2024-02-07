@@ -51,13 +51,12 @@ p{
 
 
 /* ================UNITE===============*/
-#PionsJoueurA, #PionsJoueurB{
+#player1, #player2{
     height: 120px;
     width: 160px;
     margin: 50px 50px;
+    background-color: darkcyan;
 }
-#PionsJoueurA{background-color: blueviolet;}
-#PionsJoueurB{background-color: rgb(13, 194, 182);}
 .unite{
     margin: 3px;
     height:  30px;
@@ -68,6 +67,11 @@ p{
 
 
 /* ================BOUTON===============*/
+#BlockFinDeTour{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .FinDeTour{
     height: 60px;
     width: 100px;
@@ -75,6 +79,7 @@ p{
     display: flex;
     align-items: center;
     justify-content: center;
+    position: absolute;
 }
 #rejoue{
     height: 30px;
