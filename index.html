@@ -8,45 +8,14 @@
 </head>
 <body>
     <div id="plateau">
-        <div id="tableauDesScores">
-            <div id="joueurA" class="Score"><h2>joueurA</h2><p id="scoreA">0</p></div>
-            <div id="CompteTour"></div>
-            <div id="rejoue">Rejoue</div>
-            <div id="joueurB" class="Score"><h2>joueurB</h2><p id="scoreB">0</p></div>
-        </div>
-        <div>
-            <div class="column">
-                <div id="div1" class="column Ligne" style="height: 200px; width: 40px; background-color:rgb(128, 58, 165); display:flex; flex-direction: column-reverse;" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-                <div id="div3" class="column Ligne" style="height: 200px; width: 40px; background-color:rgb(63, 209, 92); display:flex; flex-direction: column-reverse;" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-                <div id="div5" class="column Ligne" style="height: 200px; width: 40px; background-color:rgb(38, 178, 68); display:flex; flex-direction: column-reverse;" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-                <div id="div7" class="column Ligne" style="height: 200px; width: 40px; background-color:rgb(209, 102, 14); display:flex; flex-direction: column-reverse;" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-                <div id="player1" class="bourse">                    
-                     <!-- <div id="drag2"  style="height: 30px; width: 30px; background-color:rgb(81, 170, 29);" draggable="true" ondragstart="drag(event)">1</div>
-                    <div id="drag1" style="height: 30px; width: 30px; background-color:rgb(26, 196, 205);" draggable="true" ondragstart="drag(event)">2</div>
-                    <div id="drag4" style="height: 30px; width: 30px; background-color:rgb(204, 126, 117);" draggable="true" ondragstart="drag(event)">3</div>
-                    <div id="drag3" style="height: 30px; width: 30px; background-color:rgb(211, 214, 32);" draggable="true" ondragstart="drag(event)">4</div> -->
-                </div>
-                
-            </div>
-            <div class="column">
-                <div id="div2" class="column column-reverse Ligne" style="height: 200px; width: 40px; background-color:dodgerblue;" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-                <div id="div4" class="column column-reverse Ligne" style="height: 200px; width: 40px; background-color:rgb(120, 127, 134);" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-                <div id="div6" class="column column-reverse Ligne" style="height: 200px; width: 40px; background-color:rgb(38, 178, 68);" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-                <div id="div8" class="column column-reverse Ligne" style="height: 200px; width: 40px; background-color:rgb(138, 63, 67);" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-                <div id="player2" class="bourse"></div>
-            </div>
-        </div>
-        <div id="BlockFinDeTour">
-            <div class="FinDeTour JA">Fin de tour</div>
-            <div class="FinDeTour JB">Fin de tour</div>
-        </div>
+        <div id="tableauDesScores"></div>
+        <div id="player1" class="bourse"></div>
+        <div id="player2" class="bourse"></div>
+
+
+        <div id="BlockFinDeTour"></div>
     </div>
 
 </body>
-<script src="./JS/Joueur.js"></script>
-<script src="./JS/Unit.js"></script>
-<script src="./JS/Ligne.js"></script>
-<script src="./JS/Resultat.js"></script>
-<script src="./JS/ToutLesPions.js"></script>
-<script src="./JS/javascript.js"></script>
+<script src="./JS/javascript.js" type="module"></script>
 </html>

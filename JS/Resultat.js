@@ -1,6 +1,6 @@
-class Resultat{
-    scoreA = 0;
-    scoreB = 0;
+export default class Resultat{
+    #scoreA = 0;
+    #scoreB = 0;
     constructor(){
 
     }

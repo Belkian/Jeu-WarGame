@@ -1,44 +1,75 @@
- // let rejoue = document.getElementById('rejoue');
-let FinDeTourJABoolean = false;
-let FinDeTourJBBoolean = true;
-let JA = document.getElementsByClassName('JA')[0];
-let JB = document.getElementsByClassName('JB')[0];
-JA.style.zIndex = 1;
-let joueur1 = new player('player1');
-let joueur2 = new player('player2');
+import LigneDePlacement from "./LigneDePlacement.js";
+import player from "./player.js";
+//  import tableauPion from "./tableauPion.js";
+//  import Unit from "./Unit.js.js";
+//  import Resultat from "./Resultat.js";
+let tableauJoueur = []
+tableauJoueur.push(new player('clem'));
+tableauJoueur.push(new player('Bob'));
 
-let tableauPion1 = new tableauPion();
-let tableauPion2 = new tableauPion();
+let tableauLigneDePlacement = []
+tableauLigneDePlacement.push(new LigneDePlacement())
+tableauLigneDePlacement.push(new LigneDePlacement())
+tableauLigneDePlacement.push(new LigneDePlacement())
+tableauLigneDePlacement.push(new LigneDePlacement())
 
-let pion1 = new Unit(joueur1,tableauPion1);
+// let rejoue = document.getElementById('rejoue');
+// let FinDeTourJABoolean = false;
+// let FinDeTourJBBoolean = true;
+// let JA = document.getElementsByClassName('JA')[0];
+// let JB = document.getElementsByClassName('JB')[0];
+// JA.style.zIndex = 1;
+// let joueur1 = new player('player1');
+// let joueur2 = new player('player2');
 
-let BTNFinDeTour = document.querySelectorAll('.FinDeTour'); 
- BTNFinDeTour.forEach(FinDeTour => { addEventListener('click', ecouteQuelJoueur(FinDeTour))
- });
- function ecouteQuelJoueur(FinDeTour){
-   FinDeTour.addEventListener('click', () => FinDuTour(FinDeTour));
- }
+// let tableauPion1 = new tableauPion();
+// let tableauPion2 = new tableauPion();
 
- function FinDuTour(FinDeTour){
-   if(FinDeTour.classList.contains('JA') && FinDeTourJABoolean == false){
-     JB.style.zIndex = 1;
-     JA.style.zIndex = 0;
-     pion1 = new Unit(joueur1,tableauPion1);
-     FinDeTourJABoolean = true;
-     FinDeTourJBBoolean = false;
-   }
+// let pion1 = new Unit(joueur1,tableauPion1);
 
-   if(FinDeTour.classList.contains('JB') && FinDeTourJBBoolean == false){
-     pion2 = new Unit(joueur2,tableauPion2);
-     FinDeTourJBBoolean = true;
-   }
+// let BTNFinDeTour = document.querySelectorAll('.FinDeTour'); 
+//  BTNFinDeTour.forEach(FinDeTour => { addEventListener('click', ecouteQuelJoueur(FinDeTour))
+//  });
+//  function ecouteQuelJoueur(FinDeTour){
+//    FinDeTour.addEventListener('click', () => FinDuTour(FinDeTour));
+//  }
 
-   if(FinDeTourJBBoolean == true && FinDeTourJABoolean == true && icomptetour < 5){    
-     JB.style.zIndex = 0;
-     JA.style.zIndex = 1;
-     resolutionDuTour()
-   }
- }
+
+//  allowDrop(ev) {
+//         ev.preventDefault();
+//     }
+    
+//     drag(ev) {
+//         ev.dataTransfer.setData("text", ev.target.id);
+//     }
+    
+//     drop(ev) {
+//         ev.preventDefault();
+//         let data = ev.dataTransfer.getData("text");
+//         ev.target.appendChild(document.getElementById(data));
+//     }
+
+
+//  function FinDuTour(FinDeTour){
+//    if(FinDeTour.classList.contains('JA') && FinDeTourJABoolean == false){
+//      JB.style.zIndex = 1;
+//      JA.style.zIndex = 0;
+//      pion1 = new Unit(joueur1,tableauPion1);
+//      FinDeTourJABoolean = true;
+//      FinDeTourJBBoolean = false;
+//    }
+
+//    if(FinDeTour.classList.contains('JB') && FinDeTourJBBoolean == false){
+//      pion2 = new Unit(joueur2,tableauPion2);
+//      FinDeTourJBBoolean = true;
+//    }
+
+//    if(FinDeTourJBBoolean == true && FinDeTourJABoolean == true && icomptetour < 5){    
+//      JB.style.zIndex = 0;
+//      JA.style.zIndex = 1;
+//      resolutionDuTour()
+//    }
+//  }
  
 /**
  Résolution du fin du tour 

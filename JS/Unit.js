@@ -1,13 +1,17 @@
-class Unit{
-    constructor(PionsJoueur,unite){
-        this.Create(PionsJoueur,unite);
+export default class Unit{
+    constructor(bourse,unite){
+        this.Create(bourse,unite);
     }
-    Create(PionsJoueur,unite){
+
+    Create(bourse,unite){
             let poids;
-            PionsJoueur = document.getElementById('player1');
+            bourse = document.getElementsByClassName('bourse');
             for (let index = 0; index < 3; index++) {
                 poids = unite.unit.shift();
-                PionsJoueur.innerHTML += `<div id="soldatfzeafazef" class="unite " draggable="true" ondragstart="drag(event)">${poids}</div>`;
+                let PionDuJoueur = document.createElement('div')
+                PionDuJoueur.classList.add('unite')
+                bourse.appendChild('PionDuJoueur')
             }
+            
     }
 }

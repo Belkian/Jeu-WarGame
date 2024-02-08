@@ -1,4 +1,4 @@
-class tableauPion{
+export default class tableauPion{
     constructor(){
         this.unit = this.randomWithFixedSum(2400,15);
     }

@@ -5,101 +5,33 @@ body{
 h2{
     margin: 5px;
 }
-#plateau{
-    display:flex;
-}
+
 p{
     margin: 0;
+    color: white;
 }
 
-/* ================SCORE===============*/
-#tableauDesScores{
+#plateau{
     display: flex;
-    justify-content: space-evenly;
-    flex-direction: column;
-    align-items: center;
 }
-.Score{
-    background-color: rgb(151, 151, 151);
-    height: 100px;
-    width: 100px;
-    margin: 0 15px;
+
+.Colonne{
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
     align-items: center;
-    justify-content: center;
-}
-/* =========END===SCORE===END=========*/
-
-/*=======Compte Tour======*/
-#CompteTour{
-    background-color: darkblue;
-    height: 30px;
-    width: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.tour{
-    height: 15px;
-    width: 15px;
-    background-color: aqua;
-    border-radius: 100px;
-    margin: 0 2px;
-}
-/*===FIN====Compte Tour===FIN===*/
-
-
-/* ================UNITE===============*/
-#player1, #player2{
-    height: 120px;
-    width: 160px;
-    margin: 50px 50px;
-    background-color: darkcyan;
-}
-.unite{
-    margin: 3px;
-    height:  30px;
-    width : 30px;
+    width : 60px;
+    height : 300px;
+    margin : 5px;
     background-color : red;
 }
-/* =========END===UNITE===END=========*/
 
-
-/* ================BOUTON===============*/
-#BlockFinDeTour{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.couloir{
+    width : 50px;
+    background-color : yellow;
+    height : 140px;
 }
-.FinDeTour{
-    height: 60px;
-    width: 100px;
-    background-color: bisque;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-}
-#rejoue{
-    height: 30px;
-    width: 100px;
-    background-color: chocolate;
-}
-/* =========END===BOUTON===END=========*/
-
-
-/* ================Colonne===============*/
-.column{
-    display: flex;
-    align-items: center;
-}
-.column-reverse{
-    flex-direction: column;
-}
-/* =========END===Colonne===END=========*/
-
-.bourse{
-    display: flex;
-    flex-wrap: wrap;
+.unite{
+    height:40px;
+    width: 40px;
 }
