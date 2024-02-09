@@ -32,6 +32,6 @@ p{
     height : 140px;
 }
 .unite{
-    height:40px;
-    width: 40px;
+    background-color: firebrick;
+    padding: 5px;
 }

@@ -1,17 +1,18 @@
 import LigneDePlacement from "./LigneDePlacement.js";
 import player from "./player.js";
-//  import tableauPion from "./tableauPion.js";
-//  import Unit from "./Unit.js.js";
+import tableauPion from "./tableauPion.js";
 //  import Resultat from "./Resultat.js";
 let tableauJoueur = []
 tableauJoueur.push(new player('clem'));
 tableauJoueur.push(new player('Bob'));
 
-let tableauLigneDePlacement = []
+let tableauLigneDePlacement = [];
 tableauLigneDePlacement.push(new LigneDePlacement())
 tableauLigneDePlacement.push(new LigneDePlacement())
 tableauLigneDePlacement.push(new LigneDePlacement())
 tableauLigneDePlacement.push(new LigneDePlacement())
+
+let bourse1 = new tableauPion();
 
 // let rejoue = document.getElementById('rejoue');
 // let FinDeTourJABoolean = false;
@@ -34,20 +35,6 @@ tableauLigneDePlacement.push(new LigneDePlacement())
 //    FinDeTour.addEventListener('click', () => FinDuTour(FinDeTour));
 //  }
 
-
-//  allowDrop(ev) {
-//         ev.preventDefault();
-//     }
-    
-//     drag(ev) {
-//         ev.dataTransfer.setData("text", ev.target.id);
-//     }
-    
-//     drop(ev) {
-//         ev.preventDefault();
-//         let data = ev.dataTransfer.getData("text");
-//         ev.target.appendChild(document.getElementById(data));
-//     }
 
 
 //  function FinDuTour(FinDeTour){
