@@ -14,7 +14,10 @@ export default class player {
     set joueur(joueur) {
         return this.#joueur = joueur;
     }
-
+    get joueurJSON() {
+        let objet = { NomDuJoueur: this.joueur };
+        return objet;
+    }
     NomDesJoueur() {
         let tableauScore = document.querySelector('#tableauDesScores');
         let Joueur = document.createElement('div');
