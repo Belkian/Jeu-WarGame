@@ -59,10 +59,10 @@ function resolutionDuTour() {
   if (Ligne[0].hasChildNodes() === true && Ligne[4].hasChildNodes() === true) {
     let resultat1 = Ligne[0].firstChild.innerText - Ligne[4].firstChild.innerText;
     if (resultat1 < 0) {
-      Ligne[4].firstChild.innerText = Ligne[4].firstChild.innerText - (resultat1 * -1);
+      Ligne[4].firstChild.innerText = Ligne[4].firstChild.innerText - Ligne[0].firstChild.innerText;
       Ligne[0].firstChild.remove();
     } else {
-      Ligne[0].firstChild.innerText = Ligne[0].firstChild.innerText - resultat1;
+      Ligne[0].firstChild.innerText = Ligne[0].firstChild.innerText - Ligne[4].firstChild.innerText;
       Ligne[4].firstChild.remove();
     }
     CalculeResultat(resultat1);
@@ -72,10 +72,10 @@ function resolutionDuTour() {
   if (Ligne[1].hasChildNodes() === true && Ligne[5].hasChildNodes() === true) {
     let resultat1 = Ligne[1].firstChild.innerText - Ligne[5].firstChild.innerText;
     if (resultat1 < 0) {
-      Ligne[5].firstChild.innerText = Ligne[5].firstChild.innerText - (resultat1 * -1);
+      Ligne[5].firstChild.innerText = Ligne[5].firstChild.innerText - Ligne[1].firstChild.innerText;
       Ligne[1].firstChild.remove();
     } else {
-      Ligne[1].firstChild.innerText = Ligne[1].firstChild.innerText - resultat1;
+      Ligne[1].firstChild.innerText = Ligne[1].firstChild.innerText - Ligne[5].firstChild.innerText;
       Ligne[5].firstChild.remove();
     }
     CalculeResultat(resultat1);
@@ -85,10 +85,10 @@ function resolutionDuTour() {
   if (Ligne[2].hasChildNodes() === true && Ligne[6].hasChildNodes() === true) {
     let resultat1 = Ligne[2].firstChild.innerText - Ligne[6].firstChild.innerText;
     if (resultat1 < 0) {
-      Ligne[6].firstChild.innerText = Ligne[6].firstChild.innerText - (resultat1 * -1);
+      Ligne[6].firstChild.innerText = Ligne[6].firstChild.innerText - Ligne[2].firstChild.innerText;
       Ligne[2].firstChild.remove();
     } else {
-      Ligne[2].firstChild.innerText = Ligne[2].firstChild.innerText - resultat1;
+      Ligne[2].firstChild.innerText = Ligne[2].firstChild.innerText - Ligne[6].firstChild.innerText;
       Ligne[6].firstChild.remove();
     }
     CalculeResultat(resultat1);
@@ -99,10 +99,10 @@ function resolutionDuTour() {
   if (Ligne[3].hasChildNodes() === true && Ligne[7].hasChildNodes() === true) {
     let resultat1 = Ligne[3].firstChild.innerText - Ligne[7].firstChild.innerText;
     if (resultat1 < 0) {
-      Ligne[7].firstChild.innerText = Ligne[7].firstChild.innerText - (resultat1 * -1);
+      Ligne[7].firstChild.innerText = Ligne[7].firstChild.innerText - Ligne[3].firstChild.innerText;
       Ligne[3].firstChild.remove();
     } else {
-      Ligne[3].firstChild.innerText = Ligne[3].firstChild.innerText - resultat1;
+      Ligne[3].firstChild.innerText = Ligne[3].firstChild.innerText - Ligne[7].firstChild.innerText;
       Ligne[7].firstChild.remove();
     }
     CalculeResultat(resultat1);
